@@ -17,7 +17,7 @@ waow
 EXTERN MEAS_AX_TORQUE(AXIS, INT, INT)
 
 XZ_HOME ;Goto home pos
-MEAS_AX_TORQUE(X , 360 , 361) ;Setup axis monitoring
+MEAS_AX_TORQUE(X , 360 , 361)
 G0 X100
 
 M2
@@ -32,13 +32,13 @@ M2
 \begin{lstlisting}[language=python,caption=Python 4 life <3]
 def compute_gott_mos(lvl):
 	if lvl < 0:
-		lvl = np.inf 
+		lvl = np.inf
 	return lvl
 
 
 \end{lstlisting}
 
-% How to include complete programs 
+% How to include complete programs
 % \lstinputlisting[language=sinumerik,caption=Complete NC Cycle for axis monitoring.]{MEAS_AX_TORQUE.SPF}
 
 
