@@ -1,0 +1,104 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{accents}
+\usepackage{lastpage}
+\usepackage{calc}
+
+% Helvetica-like font
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+
+% Sinumerik syntax color
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple}, % 
+	%basicstyle=\fontfamily{droidsansmono}\footnotesize,
+	basicstyle=\fontfamily{pcr}\footnotesize,
+	%basicstyle==\fontfamily{plex-otf},
+    %basicstyle=\ttfamily\footnotesize,
+	%basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=none,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+
+
+\lstdefinelanguage{sinumerik}{
+	keywords = [1]{REAL, INT, BOOL, STRING, AXIS,DEFINE,AS},
+	keywords = [2]{GOTOF,GOTOB,STOPRE,SUPA,TRANS,AND,OR,NOT,XOR,ATRANS,PROC,VAR,DEF,TRUE,FALSE,
+	MSG,WAITM,IF,ELSE,ENDIF,WHILE,ENDWHILE,FOR,ENDFOR,IN,ABS,ELSE,ENDFOR,ENDIF,ENDLOOP,ENDPROC,ENDWHILE,EVERY,EXTERN,GET,
+	GETD,ID,IDS,LOCK,LOOP,MEAS,POT,RDISABLE,RELEASE,RET,REPEAT,REPOSA,REPOS,RET,ROUND,SAVE,
+	SBLOF,SBLON,SETINT,SETM,SETPIECE,SPOF,SPOS,SQRT,START,STOPRE,STOPREOF,STRLEN,SUBSTR,SUPA,WAIT,WAITC,WAITE,WAITM,WAITMC,
+	WAITP,WHEN,WHENEVER,DO,WHILE},
+	keywordstyle=\color{green},
+	keywordstyle=[1]\color{codepurple},
+	keywordstyle=[2]\color{blue},% for example
+    sensitive=false, % keywords are not case-sensitive
+    morecomment=[l]{;}, % l is for line comment
+    morestring=[b]" % defines that strings are enclosed in double quotes
+} %
+
+
+
+\lstset{style=mystyle}
+
+
+\hypersetup{
+	  colorlinks=true,
+	  linkcolor=[rgb]{0.058, 0.34, 0.83},
+	 	 linkbordercolor=[rgb]{0.058, 0.34, 0.83},
+	urlcolor=[rgb]{0.058, 0.34, 0.83} 
+}
+
+\graphicspath{{Figures}}
+
+\setlength{\parindent}{0.0in} % No indentation on new paragraphs
+\setlength{\parskip}{0.1in} % Space between paragraphs
+
+% Page layout
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\includegraphics[scale=0.6]{Figures/logo.png}}
+
+\makeatletter % after this can we read title, author \@title
+
+\chead{\textbf{\@title}\\ \@author}
+\rhead{\today}
+\lfoot{}
+\cfoot{}
+\rfoot{\small{\thepage \, (\pageref*{LastPage}) }}
+\headsep 1.5em
+
+\newcommand\munderbar[1]{\underaccent{\bar}{#1}}
+

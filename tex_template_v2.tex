@@ -1,0 +1,46 @@
+
+
+\title{Sicken cool \LaTeX template}
+\author{Elias e de va?}
+
+\input{tex_setup.tex}
+
+\begin{document}
+
+\section{Introduction}
+Intro here
+
+\section{Sinumerik code}
+waow
+
+\begin{lstlisting}[language=sinumerik,caption=Test-program used during test runs.]
+EXTERN MEAS_AX_TORQUE(AXIS, INT, INT)
+
+XZ_HOME ;Goto home pos
+MEAS_AX_TORQUE(X , 360 , 361) ;Setup axis monitoring
+G0 X100
+
+M2
+\end{lstlisting}
+
+\section{Python code}
+
+\begin{equation}
+\text{waow}^2
+\end{equation}
+
+\begin{lstlisting}[language=python,caption=Python 4 life <3]
+def compute_gott_mos(lvl):
+	if lvl < 0:
+		lvl = np.inf 
+	return lvl
+
+
+\end{lstlisting}
+
+% How to include complete programs 
+% \lstinputlisting[language=sinumerik,caption=Complete NC Cycle for axis monitoring.]{MEAS_AX_TORQUE.SPF}
+
+
+
+\end{document}
